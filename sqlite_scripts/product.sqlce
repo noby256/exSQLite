@@ -1,0 +1,9 @@
+-- Script Date: 05.04.2015 12:24  - ErikEJ.SqlCeScripting version 3.5.2.49
+DROP TABLE [product_table];
+CREATE TABLE [product_table] (
+  [Id] int NOT NULL
+, [name] nchar(20) NOT NULL
+, [description] nchar(50) NOT NULL
+, CONSTRAINT [sqlite_master_PK_product_table] PRIMARY KEY ([Id])
+, FOREIGN KEY ([Id]) REFERENCES [purchase_table] ([product_fk]) ON DELETE NO ACTION ON UPDATE NO ACTION
+);

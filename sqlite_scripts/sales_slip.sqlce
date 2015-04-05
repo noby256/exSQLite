@@ -1,0 +1,10 @@
+-- Script Date: 05.04.2015 12:27  - ErikEJ.SqlCeScripting version 3.5.2.49
+DROP TABLE [sales_slip_table];
+CREATE TABLE [sales_slip_table] (
+  [Id] int NOT NULL
+, [time] datetime NOT NULL
+, [total_price] money NOT NULL
+, [Shop] nchar(50) NULL
+, CONSTRAINT [sqlite_master_PK_sales_slip_table] PRIMARY KEY ([Id])
+, FOREIGN KEY ([Id]) REFERENCES [sales_slip_table] ([sales_slip_fk]) ON DELETE NO ACTION ON UPDATE NO ACTION
+);

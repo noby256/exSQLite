@@ -1,0 +1,8 @@
+-- Script Date: 05.04.2015 12:23  - ErikEJ.SqlCeScripting version 3.5.2.49
+CREATE TABLE [purchase_table] (
+  [Id] INTEGER NOT NULL
+, [pruduct_fk] int NOT NULL
+, [sales_slip_fk] int NOT NULL
+, [price] money NOT NULL
+, CONSTRAINT [PK_purchase_table] PRIMARY KEY ([Id])
+);
